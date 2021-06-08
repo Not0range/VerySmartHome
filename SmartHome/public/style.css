@@ -1,0 +1,226 @@
+/* body {background-image: url("bcolor.png");} */
+body{background-color:#b1afca ;}
+    .wrapper {
+        display: grid;
+        grid-template-columns: 200px 80%;
+        grid-auto-rows: 100%;
+        width: 100%;
+        height: 100%;
+      }
+      
+button {
+display: block;
+background-color: inherit;
+color: white;
+padding: 22px 16px;
+width: 100%;
+border: 10px;
+outline: none;
+text-align: left;
+cursor: pointer;
+transition: 0.3s;
+font-size: 19px;
+font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+background-color: #a9a7e4;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+background-color: #817de2;
+}
+ 
+#Main{
+  display:flex; 
+  flex-wrap: wrap;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+float: left;
+padding: 0px 12px;
+border: 1px solid #817de2;
+width: 100%;
+border-left: none;
+height: 100%;
+display:flex;
+}
+
+.btn-menu {
+    color: #fff;
+    background-color: #817de2;
+    padding: 7px;
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    cursor: pointer;
+    transition: right .23s;
+    width: 30px;
+    height: 20px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  .btn-menu span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+  }
+  
+  .hidden-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    list-style: none;
+    padding: 0 5px;
+    margin: 0;
+    box-sizing: border-box;
+    width:  20%;
+    background-color: #817de2;
+    height: 100%;
+    top: 0;
+    right: -20%;
+    transition: right .2s;
+    z-index: 200;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  
+  .hidden-menu div {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    border:#3e3c6d solid 1px;
+    margin: 0px 0px 4px 0px;
+    color: #fff;
+  }
+  
+  .hidden-menu li a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .hidden-menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .hidden-menu-ticker {
+    display: none;
+  }
+  
+  .btn-menu span.first {
+    margin-top: 0;
+  }
+  
+  .hidden-menu-ticker:checked~.btn-menu {
+    right: 20%;
+  }
+  
+  .hidden-menu-ticker:checked~.hidden-menu{
+    right: 0;
+  }
+  
+  .hidden-menu-ticker:checked~.btn-menu span.first {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+  
+  .hidden-menu-ticker:checked~.btn-menu span.second {
+    opacity: 0;
+  }
+  
+  .hidden-menu-ticker:checked~.btn-menu span.third {
+    transform: rotate(-45deg);
+    top: -8px;
+  }
+  
+  @media (max-width: 425px) {
+    .hidden-menu {
+      width: 80%;
+      right: -80%;
+    }
+    .hidden-menu-ticker:checked~.btn-menu {
+      right: 80%;
+    }
+}
+.sensorsBlok{
+  display: flex;
+  border:#ffffff;
+  border-style: solid;
+  border-radius: 12px;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+}
+.buttonGlavnia {
+    background-color: #817de2;
+    border: none;
+    user-select: none;
+    border-radius: 12px;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    vertical-align:center;
+    margin: 20px 20px;
+    width: 200px;
+    height: 50px;
+    
+}
+
+.CategoriesDevice
+{
+  display: flex;
+  user-select: none;
+  flex-direction: column;
+  border:#ffffff solid 1px;
+  margin: 0 5 0 5;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 12px;
+}
+
+.CategoriesDevice>div{
+  width: 150px;
+  font-size: 20px;
+  vertical-align:center;
+  margin: 20px 20px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  }
+
+  .CategoriesDevice>div>div{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: center;
+  }
+
+  .CategoriesDevice h3{
+    margin: 0px 0px 0px 15px;
+    color: white;
+    user-select: none;
+  }
+
+  .SesorsHiggers{
+    margin-left: 15px;
+    user-select: none;
+    cursor: pointer;
+  }

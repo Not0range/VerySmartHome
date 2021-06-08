@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Умный дом</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="script.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+    <body>
+<div class="wrapper">
+    <div>
+  <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Main')" id="defaultOpen">Главная</button>
+  <button class="tablinks" onclick="openCity(event, 'Device')">Устройства</button>
+  <button class="tablinks" onclick="openCity(event, 'System_func')">Системные функции</button>
+</div> 
+    </div>
+    <div>
+      
+        <div id="Main" class="tabcontent">
+          
+    <!-- <a href="https://clck.yandex.ru/redir/dtype=stred/pid=7/cid=1228/*https://yandex.md/weather/10317" target="_blank"><img src="https://info.weather.yandex.net/10317/2_white.ru.png?domain=ua" border="0" alt="Яндекс.Погода"/><img width="1" height="1" -->
+      <!-- src="https://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*https://img.yandex.ru/i/pix.gif" alt="" ></a> -->
+    </br>
+            
+          </div>
+          
+          <div id="Device" class="tabcontent">
+             
+          </div>
+          
+          <div id="System_func" class="tabcontent">
+        
+          </div>
+          
+          <script>
+          function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "";
+              evt.currentTarget.className += " active";
+          }
+          
+          // Get the element with id="defaultOpen" and click on it
+          document.getElementById("defaultOpen").click();
+          </script>
+          <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+
+          <label for="hmt" class="btn-menu">
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+          </label>
+        
+          <div id="errors" class="hidden-menu">
+           
+          </div>
+ </div>
+    
+ </div>
+ 
+</body>
+</html>
